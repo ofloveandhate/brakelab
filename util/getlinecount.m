@@ -1,9 +1,9 @@
 %linecount: determines the number of lines in a text file.  
 %
-%returns [] if the file does not exist
+%returns [] errors if the file does not exist
 %        [int] the number of lines to be read in if it does.
 %
-%input: string file
+%input: a string containing the name of file
 %
 %
 % copyright 2013 - 2017 Dani Brake
