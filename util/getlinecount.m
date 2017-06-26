@@ -5,7 +5,7 @@
 
 %input: string file
 
-% copyright 2013, 2016 Daniel Brake
+% copyright 2013, 2016 Dani Brake
 % University of Notre Dame
 % Applied and Computational Mathematics and Statistics
 % danielthebrake@gmail.com

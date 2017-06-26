@@ -27,23 +27,26 @@
 %             b_input.variable_group(2).u = '';
 %             b_input.variable_group(2).v = '';
 %
+% Bertini (TM) is a registered trademark
 %
-%
-% copyright 2015, 2016 Daniel Brake
+% copyright 2015 - 2017 Dani Brake
 % University of Notre Dame
 % Applied and Computational Mathematics and Statistics
 % danielthebrake@gmail.com
 %
-%  Bertini (TM) is a registered trademark.
+% University of Wisconsin Eau Claire
+% Department of Mathematics
+% brakeda@uwec.edu
 %
-%     This file is part of Bertini_tropical.
 %
-%     Bertini_tropical is free software: you can redistribute it and/or modify
+%     This file is part of brakelab.
+%
+%     brakelab is free software: you can redistribute it and/or modify
 %     it under the terms of the GNU General Public License as published by
 %     the Free Software Foundation, either version 3 of the License, or
 %     (at your option) any later version.
 % 
-%     Bertini_tropical is distributed in the hope that it will be useful,
+%     brakelab is distributed in the hope that it will be useful,
 %     but WITHOUT ANY WARRANTY; without even the implied warranty of
 %     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 %     GNU General Public License for more details.

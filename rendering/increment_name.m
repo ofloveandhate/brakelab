@@ -4,7 +4,7 @@
 %could potentially be used elsewhere for autogeneration of
 %names.
 
-% daniel brake
+% Dani Brake
 % colorado state university, north carolina state university, notre dame, 
 % university of wisconsin eau claire
 % mathematics and applied mathematics
