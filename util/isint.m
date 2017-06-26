@@ -1,4 +1,7 @@
+% this simply function is 
 % from u/meibster at stackoverflow
+%
+% works for only a single integer.  testing arrays of numbers is unsupported.
 
 function answer = isint(n)
 
