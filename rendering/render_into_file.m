@@ -3,10 +3,10 @@
 % a utility for saving plots to a file from matlab.
 %
 % intended for use with the 
-%   - paramotopy, 
-%   - bertini_real, 
-%   - bertini_tropical, 
-%   - bertini_real-chebfun 
+%   - paramotopy,  (paramotopy.com)
+%   - bertini_real,  (bertinireal.com, https://github.com/ofloveandhate/bertini_real)
+%   - bertini_tropical, (https://github.com/ofloveandhate/bertini_tropical)
+%   - bertini_real-chebfun (not available online yet [as of june 2017])
 % suites of functions.
 %
 % if the argument is `gendef`, you will get the current default values.
