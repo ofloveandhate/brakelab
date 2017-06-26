@@ -1,25 +1,29 @@
 %linecount: determines the number of lines in a text file.  
-
+%
 %returns [] if the file does not exist
 %        [int] the number of lines to be read in if it does.
-
+%
 %input: string file
-
-% copyright 2013, 2016 Dani Brake
+%
+%
+% copyright 2013 - 2017 Dani Brake
 % University of Notre Dame
 % Applied and Computational Mathematics and Statistics
 % danielthebrake@gmail.com
 %
-%  Bertini (TM) is a registered trademark.
+% University of Wisconsin Eau Claire
+% Department of Mathematics
+% brakeda@uwec.edu
 %
-%     This file is part of Bertini_tropical.
 %
-%     Bertini_tropical is free software: you can redistribute it and/or modify
+%     This file is part of brakelab.
+%
+%     brakelab is free software: you can redistribute it and/or modify
 %     it under the terms of the GNU General Public License as published by
 %     the Free Software Foundation, either version 3 of the License, or
 %     (at your option) any later version.
 % 
-%     Bertini_tropical is distributed in the hope that it will be useful,
+%     brakelab is distributed in the hope that it will be useful,
 %     but WITHOUT ANY WARRANTY; without even the implied warranty of
 %     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 %     GNU General Public License for more details.
