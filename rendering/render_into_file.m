@@ -91,16 +91,16 @@ plot_params.fig = gcf;
 
 PaperPositionCrap(plot_params);
 
-evalme = get_command(plot_params, args);
+[evalme, final_name] = get_command(plot_params, args);
 
 % display(evalme);
 eval(evalme);
-display(sprintf('image saved as %s',get_final_name(plot_params)));
+display(sprintf('image saved as %s',final_name));
 end
 
 
 
-function evalme = get_command(plot_params, args)
+function [evalme, final_name] = get_command(plot_params, args)
 
 final_name = get_final_name(plot_params);
 
