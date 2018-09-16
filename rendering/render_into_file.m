@@ -54,9 +54,10 @@ function plot_params = render_into_file(varargin)
 
 if ~isempty(varargin)
 	if isa(varargin{1},'char')
-		if strcmp(varargin,'gendef')
-			plot_params = generate_defaults();
-			return
+		switch varargin{1}
+			case {'gendef','generate','g'}
+				plot_params = generate_defaults();
+				return
 		end
 	end
 end
@@ -64,7 +65,8 @@ end
 if isempty(varargin)
 	plot_params = generate_defaults();
 	args = {};
-elseif and(ischar(varargin{1} ), length(varargin)==1)
+elseif and(ischar(varargin{1} ), nargin==1)
+	generate_defaults()
 	
 	plot_params.format = 'eps';
 	plot_params.format_flag = 'psc2';
@@ -95,7 +97,10 @@ PaperPositionCrap(plot_params);
 
 % display(evalme);
 eval(evalme);
-display(sprintf('image saved as %s',final_name));
+if ~plot_params.silent
+	fprintf('image saved as %s\n',final_name);
+end
+
 end
 
 
@@ -104,9 +109,9 @@ function [evalme, final_name] = get_command(plot_params, args)
 
 final_name = get_final_name(plot_params);
 
-% if strcmp(plot_params.format,'eps')
-% 	args = [args, {'-fillpage'}];
-% end
+if plot_params.fillpage
+	args = [args, {'-fillpage'}];
+end
 
 evalme = sprintf('print(plot_params.fig,''%s'',''-d%s'', ''-r%i''',final_name,plot_params.format_flag, plot_params.resolution);
 for ii = 1:length(args)
@@ -165,6 +170,8 @@ plot_params.format = 'eps';
 plot_params.format_flag = 'epsc2';
 plot_params.autoname = true;
 plot_params.resolution = 150;
+plot_params.fillpage = false;
+plot_params.silent = false;
 end
 
 
