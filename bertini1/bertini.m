@@ -12,7 +12,7 @@
 % named as the time of the run.
 % * 'nostifle' -- Turns off redirecting of screen output.
 % * 'startname' -- The name of the start file to use, if needed.
-% * 'filename' -- The name of the input file.
+% * 'filename','input' -- The name of the input file.
 % * 'showcommand' -- Display the system command before calling it.
 % * 'failcheck' -- Check the file 'failed_paths' for failed paths.
 % * 'rerunonfail' -- If there are failed paths, re-run with the same
@@ -23,12 +23,11 @@
 %
 %  Bertini (TM) is a registered trademark
 %
-% copyright 2015 - 2017 Dani Brake
-% University of Notre Dame
+% copyright 2015 - 2018 Danielle Brake
+% University of Notre Dame (2015-2017)
 % Applied and Computational Mathematics and Statistics
-% danielthebrake@gmail.com
 %
-% University of Wisconsin Eau Claire
+% University of Wisconsin Eau Claire (2017-)
 % Department of Mathematics
 % brakeda@uwec.edu
 %
@@ -88,7 +87,7 @@ while ii<=length(varargin)
 			startfile = varargin{ii+1};
 			ii = ii+1;
 			
-		case 'filename'
+		case {'filename','input'}
 			
 			inputfile = varargin{ii+1};
 			ii = ii+1;
@@ -141,7 +140,7 @@ if failcheck
 				if ~had_failures
 					successful_resolution = true;
 					break
-				end;
+				end
 			end
 
 			if successful_resolution

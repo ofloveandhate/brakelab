@@ -326,9 +326,9 @@ elseif isint(value)
 	fprintf(fid,'%i',value);
 elseif isfloat(value)
 	if isreal(value)
-		fprintf(fid,'%1.16f',value);
+		fprintf(fid,'%1.16e',value);
 	else
-		fprintf(fid,'%1.16f+I*%1.16f',real(value),imag(value));
+		fprintf(fid,'%1.16e+I*%1.16e',real(value),imag(value));
 	end
 elseif isa(value,'sym')
 	if isreal(value)
