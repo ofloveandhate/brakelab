@@ -29,12 +29,12 @@
 %
 % Bertini (TM) is a registered trademark
 %
-% copyright 2015 - 2017 Dani Brake
-% University of Notre Dame
+% copyright 2015 - 2018 Danielle Brake
+% University of Notre Dame, 2015-2017
 % Applied and Computational Mathematics and Statistics
-% danielthebrake@gmail.com
+% danielleamethystbrake@gmail.com
 %
-% University of Wisconsin Eau Claire
+% University of Wisconsin Eau Claire, 2017-
 % Department of Mathematics
 % brakeda@uwec.edu
 %
@@ -93,6 +93,14 @@ b_input.declared_symbols = {'I','special_number';'i','special_number';'Pi','spec
 
 b_input.config = struct;
 b_input.subfunction = cell(0,0);
+
+%for unpermuting later.  this is to preserved the order of definition if you
+%later write this b_input to a file.
+orderings.functions = [];
+orderings.constant = [];
+orderings.subfunction = [];
+orderings.parameter = [];
+
 last_line_of_file = NaN;
 
 while ~(finished_input || line_number > num_lines)
@@ -129,7 +137,7 @@ while ~(finished_input || line_number > num_lines)
 		%trim off the trailing spaces
 		space_locations = isspace(totalline);  %creates a boolean array indicating whether characters are spaces
 		while ~isempty(space_locations)
-			if space_locations(end);
+			if space_locations(end)
 				totalline = totalline( 1: find(space_locations~=1:length(space_locations), 1,'last' )-1 );
 			else
 				break;
@@ -313,10 +321,15 @@ while ~(finished_input || line_number > num_lines)
 		b_input.(current_type){index,1} = left_of_equals;
 		b_input.(current_type){index,2} = totalline(equals_locations(1)+1:end-1);
 		
+		%now we want to record the order in which this object was defined, with
+		%respect to the order it was declared.  declaration is arbitrary, but
+		%definition matters, so we have to unpermute later.
+		orderings.(current_type)(end+1) = index;
 
 		
 		
 	else  %empty equals_locations
+		% that means this is a declaration, not a definition
 		words = strsplit(totalline);
 		first_word = words{1};
 		
@@ -365,8 +378,7 @@ fclose(fid);
 
 validate(b_input);
 
-
-
+unpermute_declarations(b_input, orderings);
 
 
 end
@@ -375,7 +387,17 @@ end
 
 
 
+function unpermute_declarations(b_input, orderings)
 
+names = {'constant','parameter','subfunction','functions'};
+for ii = 1:length(names)
+	f = names{ii};
+	if isprop(b_input,f)
+		b_input.(f) = b_input.(f)(orderings.(f),:);
+	end
+end
+
+end
 
 
 
@@ -413,7 +435,7 @@ end
 
 
 if ~ok_flag
-	display('there were undefined symbols:');
+	warning('there were undefined symbols:');
 	for ii = 1:length(bad_symbols)
 		display(bad_symbols{ii});
 	end
