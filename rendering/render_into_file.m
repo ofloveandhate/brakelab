@@ -34,6 +34,10 @@
 % brakeda@uwec.edu
 %
 %
+%  there is a known bug -- the autoname feature doesn't work if the basename
+%  contains a path in addition to the name
+%
+%
 %     This file is part of brakelab.
 %
 %     brakelab is free software: you can redistribute it and/or modify
