@@ -41,7 +41,7 @@
 %    2) pathvariable and parameter t and s declared, if userhomotopy.
 %    3) variables declared, as variable_group if userhomotopy==0||2, or
 %         variable if userhomotopy==1
-%    4) constant
+%    4) constants
 %    5) parameters
 %    6) subfunctions
 %    7) functions
