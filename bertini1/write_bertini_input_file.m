@@ -63,12 +63,12 @@
 %
 % Bertini (TM) is a registered trademark
 %
-% copyright 2015 - 2017 Dani Brake
-% University of Notre Dame
+% copyright 2015 - 2018 Danille Brake
+% University of Notre Dame 2015-2017
 % Applied and Computational Mathematics and Statistics
-% danielthebrake@gmail.com
+% danielleamethystbrake@gmail.com
 %
-% University of Wisconsin Eau Claire
+% University of Wisconsin Eau Claire 2017-
 % Department of Mathematics
 % brakeda@uwec.edu
 %
