@@ -1,4 +1,4 @@
-[Danielle Brake](https://danibrake.org)'s Matlab utilities for 
+[Silviana Amethyst](https://silviana.org)'s Matlab utilities for 
 
 * dealing with [Bertini1](http://bertini.nd.edu), and 
 * her other common Matlab needs, such as easily rendering figures into files.
