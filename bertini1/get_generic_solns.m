@@ -2,6 +2,9 @@
 %
 %  reads solutions from a bertini 1 standard output file.
 %
+% example invokation:
+% `get_generic_solns('singular_solutions',3)`  reads file singular_solutions, and the system has three variables
+%
 % Bertini (TM) is a registered trademark
 %
 % copyright 2015 - 2017 Dani Brake
